@@ -1,0 +1,59 @@
+<div *ngIf="isloading" id="loader"></div>
+
+<div class="container item-content rtl home">
+  <div class="profile">
+    <div class="top mt-2">
+      <div class="profile-pic">
+        <img src="http://pixelserver-001-site5.itempurl.com/uploads/{{client.clientLogo}}">
+      </div>
+      <div class="profile-description">
+        <h5>{{client.companyName}}</h5>
+        <p>{{client.discription}}</p>
+        <!-- Button trigger modal -->
+        <button class="w-100" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#termsModal">
+          شروط التعاقد
+        </button>
+
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="#termsModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+
+              <div class="modal-body">
+                <i class="bi bi-journal-check"></i>
+                <br>{{client.termsAndCondition}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-details">
+      <h5 class="mt-4 head mb-4">العناوين</h5>
+      <div class="addresses">
+        <div class="address mt-3" *ngFor="let branch of client.branches">
+          <div class="address-left">
+            <p>{{branch.address.streetName}}</p>
+          </div>
+          <div class="address-right">
+            <span>
+              <a href="{{branch.location}}"><i class="bi bi-geo-alt-fill"></i></a>
+              <a href="tel:{{branch.phoneNumber}}"><i class="bi bi-telephone-fill"></i></a>
+
+            </span>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

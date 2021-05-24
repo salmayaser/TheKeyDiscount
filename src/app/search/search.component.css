@@ -1,0 +1,21 @@
+.filter-btn{
+  text-align: left;
+}
+.ng-autocomplete {
+  width: 100%;
+}
+.search-btn{
+  text-align: right;
+  margin-right: 0px;
+}
+.search-btn button{
+  padding: 8px 10px;
+    border-radius: 1px;
+}
+.row{
+  padding: 0px;
+}
+.d{
+  display: flex;
+  justify-content: space-around;
+}

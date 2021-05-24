@@ -1,0 +1,25 @@
+
+.navbar{
+  direction: rtl;
+  padding:5px 20px ;
+}
+.navbar-brand img{
+  width: 40px;
+}
+.nav-link{
+  color:#000 !important;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+.navbar-nav{
+  margin-right: auto;
+}
+.nav-link:hover{
+  color: #e90101 !important;
+}
+@media (max-width: 767.98px) {
+  .navbar-brand img{
+    width: 27px;
+  }
+
+}

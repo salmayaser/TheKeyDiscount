@@ -1,0 +1,48 @@
+<div *ngIf="isloading" id="loader"></div>
+
+<div class="container mt-5 rtl ">
+  <h4 class="mb-4">شكراً لاختيارك لنا</h4>
+
+  <form class="form" novalidate #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="sucessful" class="alert alert-success">تم ارسال طلب العضويه بنجاح</div>
+    <div *ngIf="failed" class="alert alert-danger">من فضلك إدخل البيانات بطريقه صحيحه</div>
+
+    <div class="form-group mt-3">
+      <label>الاسم ثلاثي</label>
+      <input type="text" #name=ngModel [class.is-invalid]="name.invalid && name.touched" class="form-control" required
+        name="name" [(ngModel)]="userModel.UserName">
+    </div>
+
+    <div class="form-group mt-3"><label>البريد الالكتروني</label>
+      <input type="email" #email=ngModel [class.is-invalid]="email.invalid && email.touched" class="form-control"
+        required name="email" [(ngModel)]="userModel.Email">
+    </div>
+
+    <div class="form-group mt-3"><label>رقم الموبايل </label>
+      <input type="text" #phone=ngModel [class.is-invalid]="phone.invalid && phone.touched" class="form-control"
+        required name="phone" [(ngModel)]="userModel.phone">
+    </div>
+
+
+    <div class="form-group mt-3"><label>ناريخ الميلاد</label>
+      <input type="date" #date=ngModel [class.is-invalid]="date.invalid && date.touched" class="form-control" required
+        name="birth" [(ngModel)]="userModel.DateOfBirth">
+    </div>
+    <div class="form-group mt-3"><label>صوره شخصيه</label>
+      <input type="file" class="form-control" required name="image" (change)="fileSelect($event)">
+    </div>
+    <div class="form-group mt-3">
+      <input type="checkbox" name="terms" value="true" [(ngModel)]="userModel.terms">
+      <label>الموافقه علي <a
+          href="https://drive.google.com/file/d/16mCl1wtwAWPlmedqR_mCENmqXLkYBncR/view?usp=sharing">الشروط و
+          الأحكام</a></label>
+
+    </div>
+
+    <div class="mt-3">
+      <input type="submit" class="btn btn-danger">
+    </div>
+  </form>
+
+
+</div>

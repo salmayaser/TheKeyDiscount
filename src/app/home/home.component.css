@@ -1,0 +1,106 @@
+
+.card
+{
+    box-shadow: rgba(130, 136, 147, 0.08) 0px 0px 36px 0px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+}
+.btn-filter{
+  background-color: #cc1b1b;
+  color: #fff;
+}
+.home-head{
+  font-size: 30px;
+}
+.card img {
+  width: 150px !important;
+  height: 150px !important;
+  margin: auto;
+}
+.card-body
+{
+    padding: 15px 10px;
+}
+.card-title
+{
+    font-size: 16px;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    margin: 0 ;
+
+
+
+}
+.card-title__p
+{
+    color: #000 !important;
+    text-align: right;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* margin-bottom: 5px;
+    max-width: 100%; */
+    display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+
+.card-title span{
+    color: #cc1b1b;
+}
+.padding-0{
+  padding:5px;
+}
+.p{
+  padding: 0px;
+
+}
+
+
+@media (max-width: 400.98px) {
+  .card-title__p{
+    font-size: 11px;
+  }
+  .card img {
+    width: 70px !important;
+    height: 70px !important;
+    margin: auto;
+  }
+  .card-title{
+    font-size: 13px;
+  }
+  .category-head h3{
+    font-size: 18px;
+  }
+  .padding-0{
+    padding:2px;
+  }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .card-title__p{
+    font-size: 12px;
+  }
+
+
+
+
+}
+
+
+ /* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+ }
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+ }
