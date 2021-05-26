@@ -35,6 +35,7 @@ direction: rtl !important;
   background: #fff url(assets/images/loading.gif) no-repeat;
   background-position: center center;
   background-size: 300px;
+  background-color: #fff;
 }
 .autocomplete-container .input-container .x {
   position: absolute;

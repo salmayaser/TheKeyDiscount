@@ -38,8 +38,8 @@ export class ApiService {
   filter(categoryId: string, cityId: string) {
     return this._http.get(`${this.url}/${this.lang}/Clients/GetAllClientsByCityIdAndCategoryId?cityId=${cityId}&categoryId=${categoryId}`)
   }
-  sendEmail(userName: string) {
-    return this._http.get(`${this.url}/${this.lang}/AppUser/SendEmailWhenAddUser?UserName=${userName}`)
+  sendEmail(userName: string, email: string, phoneNumber: string) {
+    return this._http.get(`${this.url}/${this.lang}/AppUser/SendEmailWhenAddUser?UserName=${userName}&Email=${email}&PhoneNumber=${phoneNumber}`)
   }
 
 

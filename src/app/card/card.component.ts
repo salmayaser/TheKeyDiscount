@@ -54,8 +54,9 @@ export class CardComponent implements OnInit {
       this.isloading = true;
 
       this.Http.post<any>(`http://pixelserver-001-site5.itempurl.com/en/AppUser/AddNewUser/${this.params}`, formData).subscribe((res) => {
+        console.log(res)
         this.isloading = false
-        this._apis.sendEmail(this.userModel.UserName).subscribe((Response) => console.log(Response))
+        this._apis.sendEmail(this.userModel.UserName, this.userModel.Email, this.userModel.phone).subscribe((Response) => console.log(Response))
 
         alert('تم ارسال طلبك')
         window.location.reload()

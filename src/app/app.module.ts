@@ -24,6 +24,7 @@ import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     FooterComponent,
     ContactComponent,
+    PaginatorComponent,
 
   ],
   imports: [
